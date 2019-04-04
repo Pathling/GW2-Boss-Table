@@ -1,0 +1,2202 @@
+<div id="toc" class="toc"><div class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Global_schedule"><span class="tocnumber">1</span> <span class="toctext">Global schedule</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Current_events"><span class="tocnumber">1.1</span> <span class="toctext">Current events</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Full_schedule"><span class="tocnumber">1.2</span> <span class="toctext">Full schedule</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#List_of_world_bosses"><span class="tocnumber">2</span> <span class="toctext">List of world bosses</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">3</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Global_schedule">Global schedule</span></h2>
+<p>A number of world bosses appear at the same time on every instance of their relevant map.
+</p>
+<h3><span class="mw-headline" id="Current_events">Current events</span></h3>
+<p>This table shows the currently active boss event(s) and all events that will spawn within the next hour.
+</p>
+<table class="mech1 table" id="world_boss_table">
+<tr>
+<th> Event </th>
+<th> Start </th>
+<th> Countdown </th>
+<th> Zone </th>
+<th> Area </th>
+<th> Waypoint link
+</th></tr>
+<tr data-time-hh="00" data-time-mm="00">
+<td> <a href="/wiki/The_Campaign_Against_Taidha_Covington" title="The Campaign Against Taidha Covington">Admiral Taidha Covington</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554249600">00:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Bloodtide_Coast" title="Bloodtide Coast">Bloodtide Coast</a>
+</td>
+<td> <a href="/wiki/Laughing_Gull_Island" title="Laughing Gull Island">Laughing Gull Island</a>
+</td>
+<td> <style>input.chatlink { position: absolute; margin-top: -2px; margin-left: -2px; display: none; width: 6.6em; font-size: inherit; line-height: inherit; }</style><script>
+/* window.btoa polyfill / WTFPLv2 – https://github.com/davidchambers/Base64.js */
+!function(){function t(t){this.message=t}var e=this,r="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";t.prototype=new Error,t.prototype.name="InvalidCharacterError",e.btoa||(e.btoa=function(e){for(var o,n,a=0,i=r,c="";e.charAt(0|a)||(i="=",a%1);c+=i.charAt(63&o>>8-a%1*8)){if(n=e.charCodeAt(a+=.75),n>255)throw new t("'btoa' failed: The string to be encoded contains characters outside of the Latin1 range.");o=o<<8|n}return c})}();
+
+var gamelink = (function (document, btoa) {
+    var linkTypes = { item: 2, text: 3, map: 4, skill: 6, trait: 7, recipe: 9, skin: 10, outfit: 11 };
+    function encodeChatLink(type, id) {
+        if (!type) {
+            return 'invalid type';
+        }
+        type = linkTypes[type.trim().toLowerCase()] || 0;
+        if (!type) {
+            return 'invalid type';
+        }
+
+        var data = [];
+        while (id > 0) {
+            data.push(id & 255);
+            id = id >> 8;
+        }
+        while (data.length < 4 || data.length % 2 != 0) {
+            data.push(0);
+        }
+
+        if (type == 2) {
+            data.unshift(1);
+        }
+        data.unshift(type);
+
+        // encode data
+        var binary = '';
+        for (var i = 0; i < data.length; i++) {
+            binary += String.fromCharCode(data[i]);
+        }
+        return '[&' + btoa(binary) + ']';
+    }
+
+    return function (elementId) {
+        var link = document.getElementById(elementId);
+        if (!link) {
+            return;
+        }
+        var chatLink = encodeChatLink(link.getAttribute('data-type'), +link.getAttribute('data-id'));
+        var input = document.createElement('input');
+        input.className = 'chatlink';
+        input.type = 'text';
+        input.value = chatLink;
+        input.readOnly = true;
+        input.spellcheck = false;
+
+        link.appendChild(document.createTextNode(chatLink));
+        link.parentNode.insertBefore(input, link);
+
+        link.addEventListener('click', function () {
+            this.style.visibility = 'hidden';
+            input.style.display = 'inline-block';
+            input.focus();
+            input.select();
+            document.execCommand('Copy');
+        }, false);
+        input.addEventListener('blur', function () {
+            this.style.display = null;
+            link.style.visibility = null;
+        }, false);
+    };
+})(document, window.btoa);
+</script><span class="gamelink" id="gamelink-1" data-type="map" data-id="424" title="424"></span><script>gamelink('gamelink-1');</script>
+</td></tr>
+<tr data-time-hh="00" data-time-mm="00">
+<td> <a href="/wiki/Defeat_Tequatl_the_Sunless" title="Defeat Tequatl the Sunless">Tequatl the Sunless</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554249600">00:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Sparkfly_Fen" title="Sparkfly Fen">Sparkfly Fen</a>
+</td>
+<td> <a href="/wiki/Splintered_Coast" title="Splintered Coast">Splintered Coast</a>
+</td>
+<td> <span class="gamelink" id="gamelink-2" data-type="map" data-id="464" title="464"></span><script>gamelink('gamelink-2');</script>
+</td></tr>
+<tr data-time-hh="00" data-time-mm="15">
+<td> <a href="/wiki/The_Frozen_Maw" title="The Frozen Maw">Svanir Shaman Chief</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554250500">00:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Wayfarer_Foothills" title="Wayfarer Foothills">Wayfarer Foothills</a>
+</td>
+<td> <a href="/wiki/Hunter%27s_Lake" title="Hunter&#39;s Lake">Hunter's Lake</a>
+</td>
+<td> <span class="gamelink" id="gamelink-3" data-type="map" data-id="962" title="962"></span><script>gamelink('gamelink-3');</script>
+</td></tr>
+<tr data-time-hh="00" data-time-mm="30">
+<td> <a href="/wiki/The_Battle_for_Mount_Maelstrom" title="The Battle for Mount Maelstrom">Megadestroyer</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554251400">00:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Mount_Maelstrom" title="Mount Maelstrom">Mount Maelstrom</a>
+</td>
+<td> <a href="/wiki/Maelstrom%27s_Bile" title="Maelstrom&#39;s Bile">Maelstrom's Bile</a>
+</td>
+<td> <span class="gamelink" id="gamelink-4" data-type="map" data-id="717" title="717"></span><script>gamelink('gamelink-4');</script>
+</td></tr>
+<tr data-time-hh="00" data-time-mm="45">
+<td> <a href="/wiki/Thaumanova_Reactor_Fallout" title="Thaumanova Reactor Fallout">Fire Elemental</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554252300">00:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Metrica_Province" title="Metrica Province">Metrica Province</a>
+</td>
+<td> <a href="/wiki/Thaumanova_Reactor" title="Thaumanova Reactor">Thaumanova Reactor</a>
+</td>
+<td> <span class="gamelink" id="gamelink-5" data-type="map" data-id="71" title="71"></span><script>gamelink('gamelink-5');</script>
+</td></tr>
+<tr data-time-hh="01" data-time-mm="00">
+<td> <a href="/wiki/Kralkatorrik%27s_Legacy" title="Kralkatorrik&#39;s Legacy">The Shatterer</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554253200">01:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Blazeridge_Steppes" title="Blazeridge Steppes">Blazeridge Steppes</a>
+</td>
+<td> <a href="/wiki/Lowland_Burns" title="Lowland Burns">Lowland Burns</a>
+</td>
+<td> <span class="gamelink" id="gamelink-6" data-type="map" data-id="846" title="846"></span><script>gamelink('gamelink-6');</script>
+</td></tr>
+<tr data-time-hh="01" data-time-mm="00">
+<td> <a href="/wiki/Triple_Trouble" title="Triple Trouble">Evolved Jungle Wurm</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554253200">01:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Bloodtide_Coast" title="Bloodtide Coast">Bloodtide Coast</a>
+</td>
+<td> <a href="/wiki/Firth_of_Revanion" title="Firth of Revanion">Firth of Revanion</a>
+</td>
+<td> <span class="gamelink" id="gamelink-7" data-type="map" data-id="426" title="426"></span><script>gamelink('gamelink-7');</script>
+</td></tr>
+<tr data-time-hh="01" data-time-mm="15">
+<td> <a href="/wiki/The_Battle_for_Wychmire_Swamp" title="The Battle for Wychmire Swamp">Great Jungle Wurm</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554254100">01:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Caledon_Forest" title="Caledon Forest">Caledon Forest</a>
+</td>
+<td> <a href="/wiki/Wychmire_Swamp" title="Wychmire Swamp">Wychmire Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-8" data-type="map" data-id="1345" title="1345"></span><script>gamelink('gamelink-8');</script>
+</td></tr>
+<tr data-time-hh="01" data-time-mm="30">
+<td> <a href="/wiki/Seraph_Assault_on_Centaur_Camps" title="Seraph Assault on Centaur Camps">Modniir Ulgoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554255000">01:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Harathi_Hinterlands" title="Harathi Hinterlands">Harathi Hinterlands</a>
+</td>
+<td> <a href="/wiki/Modniir_Gorge" title="Modniir Gorge">Modniir Gorge</a>
+</td>
+<td> <span class="gamelink" id="gamelink-9" data-type="map" data-id="176" title="176"></span><script>gamelink('gamelink-9');</script>
+</td></tr>
+<tr data-time-hh="01" data-time-mm="45">
+<td> <a href="/wiki/Secrets_in_the_Swamp" title="Secrets in the Swamp">Shadow Behemoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554255900">01:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Queensdale" title="Queensdale">Queensdale</a>
+</td>
+<td> <a href="/wiki/Godslost_Swamp" title="Godslost Swamp">Godslost Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-10" data-type="map" data-id="247" title="247"></span><script>gamelink('gamelink-10');</script>
+</td></tr>
+<tr data-time-hh="02" data-time-mm="00">
+<td> <a href="/wiki/Defeat_the_Inquest%27s_golem_Mark_II" title="Defeat the Inquest&#39;s golem Mark II">Golem Mark II</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554256800">02:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Mount_Maelstrom" title="Mount Maelstrom">Mount Maelstrom</a>
+</td>
+<td> <a href="/wiki/Whitland_Flats" title="Whitland Flats">Whitland Flats</a>
+</td>
+<td> <span class="gamelink" id="gamelink-11" data-type="map" data-id="724" title="724"></span><script>gamelink('gamelink-11');</script>
+</td></tr>
+<tr data-time-hh="02" data-time-mm="00">
+<td> <a href="/wiki/Defeat_the_Karka_Queen_threatening_the_settlements" title="Defeat the Karka Queen threatening the settlements">Karka Queen</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554256800">02:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Southsun_Cove" title="Southsun Cove">Southsun Cove</a>
+</td>
+<td> <a href="/wiki/Driftglass_Springs" title="Driftglass Springs">Driftglass Springs</a>
+</td>
+<td> <span class="gamelink" id="gamelink-12" data-type="map" data-id="1749" title="1749"></span><script>gamelink('gamelink-12');</script>
+</td></tr>
+<tr data-time-hh="02" data-time-mm="15">
+<td> <a href="/wiki/The_Frozen_Maw" title="The Frozen Maw">Svanir Shaman Chief</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554257700">02:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Wayfarer_Foothills" title="Wayfarer Foothills">Wayfarer Foothills</a>
+</td>
+<td> <a href="/wiki/Hunter%27s_Lake" title="Hunter&#39;s Lake">Hunter's Lake</a>
+</td>
+<td> <span class="gamelink" id="gamelink-13" data-type="map" data-id="962" title="962"></span><script>gamelink('gamelink-13');</script>
+</td></tr>
+<tr data-time-hh="02" data-time-mm="30">
+<td> <a href="/wiki/Breaking_the_Claw_of_Jormag" title="Breaking the Claw of Jormag">Claw of Jormag</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554258600">02:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Frostgorge_Sound" title="Frostgorge Sound">Frostgorge Sound</a>
+</td>
+<td> <a href="/wiki/Frostwalk_Tundra" title="Frostwalk Tundra">Frostwalk Tundra</a>
+</td>
+<td> <span class="gamelink" id="gamelink-14" data-type="map" data-id="634" title="634"></span><script>gamelink('gamelink-14');</script>
+</td></tr>
+<tr data-time-hh="02" data-time-mm="45">
+<td> <a href="/wiki/Thaumanova_Reactor_Fallout" title="Thaumanova Reactor Fallout">Fire Elemental</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554259500">02:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Metrica_Province" title="Metrica Province">Metrica Province</a>
+</td>
+<td> <a href="/wiki/Thaumanova_Reactor" title="Thaumanova Reactor">Thaumanova Reactor</a>
+</td>
+<td> <span class="gamelink" id="gamelink-15" data-type="map" data-id="71" title="71"></span><script>gamelink('gamelink-15');</script>
+</td></tr>
+<tr data-time-hh="03" data-time-mm="00">
+<td> <a href="/wiki/The_Campaign_Against_Taidha_Covington" title="The Campaign Against Taidha Covington">Admiral Taidha Covington</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554260400">03:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Bloodtide_Coast" title="Bloodtide Coast">Bloodtide Coast</a>
+</td>
+<td> <a href="/wiki/Laughing_Gull_Island" title="Laughing Gull Island">Laughing Gull Island</a>
+</td>
+<td> <span class="gamelink" id="gamelink-16" data-type="map" data-id="424" title="424"></span><script>gamelink('gamelink-16');</script>
+</td></tr>
+<tr data-time-hh="03" data-time-mm="00">
+<td> <a href="/wiki/Defeat_Tequatl_the_Sunless" title="Defeat Tequatl the Sunless">Tequatl the Sunless</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554260400">03:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Sparkfly_Fen" title="Sparkfly Fen">Sparkfly Fen</a>
+</td>
+<td> <a href="/wiki/Splintered_Coast" title="Splintered Coast">Splintered Coast</a>
+</td>
+<td> <span class="gamelink" id="gamelink-17" data-type="map" data-id="464" title="464"></span><script>gamelink('gamelink-17');</script>
+</td></tr>
+<tr data-time-hh="03" data-time-mm="15">
+<td> <a href="/wiki/The_Battle_for_Wychmire_Swamp" title="The Battle for Wychmire Swamp">Great Jungle Wurm</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554261300">03:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Caledon_Forest" title="Caledon Forest">Caledon Forest</a>
+</td>
+<td> <a href="/wiki/Wychmire_Swamp" title="Wychmire Swamp">Wychmire Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-18" data-type="map" data-id="1345" title="1345"></span><script>gamelink('gamelink-18');</script>
+</td></tr>
+<tr data-time-hh="03" data-time-mm="30">
+<td> <a href="/wiki/The_Battle_for_Mount_Maelstrom" title="The Battle for Mount Maelstrom">Megadestroyer</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554262200">03:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Mount_Maelstrom" title="Mount Maelstrom">Mount Maelstrom</a>
+</td>
+<td> <a href="/wiki/Maelstrom%27s_Bile" title="Maelstrom&#39;s Bile">Maelstrom's Bile</a>
+</td>
+<td> <span class="gamelink" id="gamelink-19" data-type="map" data-id="717" title="717"></span><script>gamelink('gamelink-19');</script>
+</td></tr>
+<tr data-time-hh="03" data-time-mm="45">
+<td> <a href="/wiki/Secrets_in_the_Swamp" title="Secrets in the Swamp">Shadow Behemoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554263100">03:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Queensdale" title="Queensdale">Queensdale</a>
+</td>
+<td> <a href="/wiki/Godslost_Swamp" title="Godslost Swamp">Godslost Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-20" data-type="map" data-id="247" title="247"></span><script>gamelink('gamelink-20');</script>
+</td></tr>
+<tr data-time-hh="04" data-time-mm="00">
+<td> <a href="/wiki/Kralkatorrik%27s_Legacy" title="Kralkatorrik&#39;s Legacy">The Shatterer</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554264000">04:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Blazeridge_Steppes" title="Blazeridge Steppes">Blazeridge Steppes</a>
+</td>
+<td> <a href="/wiki/Lowland_Burns" title="Lowland Burns">Lowland Burns</a>
+</td>
+<td> <span class="gamelink" id="gamelink-21" data-type="map" data-id="846" title="846"></span><script>gamelink('gamelink-21');</script>
+</td></tr>
+<tr data-time-hh="04" data-time-mm="00">
+<td> <a href="/wiki/Triple_Trouble" title="Triple Trouble">Evolved Jungle Wurm</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554264000">04:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Bloodtide_Coast" title="Bloodtide Coast">Bloodtide Coast</a>
+</td>
+<td> <a href="/wiki/Firth_of_Revanion" title="Firth of Revanion">Firth of Revanion</a>
+</td>
+<td> <span class="gamelink" id="gamelink-22" data-type="map" data-id="426" title="426"></span><script>gamelink('gamelink-22');</script>
+</td></tr>
+<tr data-time-hh="04" data-time-mm="15">
+<td> <a href="/wiki/The_Frozen_Maw" title="The Frozen Maw">Svanir Shaman Chief</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554264900">04:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Wayfarer_Foothills" title="Wayfarer Foothills">Wayfarer Foothills</a>
+</td>
+<td> <a href="/wiki/Hunter%27s_Lake" title="Hunter&#39;s Lake">Hunter's Lake</a>
+</td>
+<td> <span class="gamelink" id="gamelink-23" data-type="map" data-id="962" title="962"></span><script>gamelink('gamelink-23');</script>
+</td></tr>
+<tr data-time-hh="04" data-time-mm="30">
+<td> <a href="/wiki/Seraph_Assault_on_Centaur_Camps" title="Seraph Assault on Centaur Camps">Modniir Ulgoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554265800">04:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Harathi_Hinterlands" title="Harathi Hinterlands">Harathi Hinterlands</a>
+</td>
+<td> <a href="/wiki/Modniir_Gorge" title="Modniir Gorge">Modniir Gorge</a>
+</td>
+<td> <span class="gamelink" id="gamelink-24" data-type="map" data-id="176" title="176"></span><script>gamelink('gamelink-24');</script>
+</td></tr>
+<tr data-time-hh="04" data-time-mm="45">
+<td> <a href="/wiki/Thaumanova_Reactor_Fallout" title="Thaumanova Reactor Fallout">Fire Elemental</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554266700">04:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Metrica_Province" title="Metrica Province">Metrica Province</a>
+</td>
+<td> <a href="/wiki/Thaumanova_Reactor" title="Thaumanova Reactor">Thaumanova Reactor</a>
+</td>
+<td> <span class="gamelink" id="gamelink-25" data-type="map" data-id="71" title="71"></span><script>gamelink('gamelink-25');</script>
+</td></tr>
+<tr data-time-hh="05" data-time-mm="00">
+<td> <a href="/wiki/Defeat_the_Inquest%27s_golem_Mark_II" title="Defeat the Inquest&#39;s golem Mark II">Golem Mark II</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554267600">05:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Mount_Maelstrom" title="Mount Maelstrom">Mount Maelstrom</a>
+</td>
+<td> <a href="/wiki/Whitland_Flats" title="Whitland Flats">Whitland Flats</a>
+</td>
+<td> <span class="gamelink" id="gamelink-26" data-type="map" data-id="724" title="724"></span><script>gamelink('gamelink-26');</script>
+</td></tr>
+<tr data-time-hh="05" data-time-mm="15">
+<td> <a href="/wiki/The_Battle_for_Wychmire_Swamp" title="The Battle for Wychmire Swamp">Great Jungle Wurm</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554268500">05:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Caledon_Forest" title="Caledon Forest">Caledon Forest</a>
+</td>
+<td> <a href="/wiki/Wychmire_Swamp" title="Wychmire Swamp">Wychmire Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-27" data-type="map" data-id="1345" title="1345"></span><script>gamelink('gamelink-27');</script>
+</td></tr>
+<tr data-time-hh="05" data-time-mm="30">
+<td> <a href="/wiki/Breaking_the_Claw_of_Jormag" title="Breaking the Claw of Jormag">Claw of Jormag</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554269400">05:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Frostgorge_Sound" title="Frostgorge Sound">Frostgorge Sound</a>
+</td>
+<td> <a href="/wiki/Frostwalk_Tundra" title="Frostwalk Tundra">Frostwalk Tundra</a>
+</td>
+<td> <span class="gamelink" id="gamelink-28" data-type="map" data-id="634" title="634"></span><script>gamelink('gamelink-28');</script>
+</td></tr>
+<tr data-time-hh="05" data-time-mm="45">
+<td> <a href="/wiki/Secrets_in_the_Swamp" title="Secrets in the Swamp">Shadow Behemoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554270300">05:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Queensdale" title="Queensdale">Queensdale</a>
+</td>
+<td> <a href="/wiki/Godslost_Swamp" title="Godslost Swamp">Godslost Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-29" data-type="map" data-id="247" title="247"></span><script>gamelink('gamelink-29');</script>
+</td></tr>
+<tr data-time-hh="06" data-time-mm="00">
+<td> <a href="/wiki/The_Campaign_Against_Taidha_Covington" title="The Campaign Against Taidha Covington">Admiral Taidha Covington</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554271200">06:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Bloodtide_Coast" title="Bloodtide Coast">Bloodtide Coast</a>
+</td>
+<td> <a href="/wiki/Laughing_Gull_Island" title="Laughing Gull Island">Laughing Gull Island</a>
+</td>
+<td> <span class="gamelink" id="gamelink-30" data-type="map" data-id="424" title="424"></span><script>gamelink('gamelink-30');</script>
+</td></tr>
+<tr data-time-hh="06" data-time-mm="00">
+<td> <a href="/wiki/Defeat_the_Karka_Queen_threatening_the_settlements" title="Defeat the Karka Queen threatening the settlements">Karka Queen</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554271200">06:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Southsun_Cove" title="Southsun Cove">Southsun Cove</a>
+</td>
+<td> <a href="/wiki/Driftglass_Springs" title="Driftglass Springs">Driftglass Springs</a>
+</td>
+<td> <span class="gamelink" id="gamelink-31" data-type="map" data-id="1749" title="1749"></span><script>gamelink('gamelink-31');</script>
+</td></tr>
+<tr data-time-hh="06" data-time-mm="15">
+<td> <a href="/wiki/The_Frozen_Maw" title="The Frozen Maw">Svanir Shaman Chief</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554272100">06:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Wayfarer_Foothills" title="Wayfarer Foothills">Wayfarer Foothills</a>
+</td>
+<td> <a href="/wiki/Hunter%27s_Lake" title="Hunter&#39;s Lake">Hunter's Lake</a>
+</td>
+<td> <span class="gamelink" id="gamelink-32" data-type="map" data-id="962" title="962"></span><script>gamelink('gamelink-32');</script>
+</td></tr>
+<tr data-time-hh="06" data-time-mm="30">
+<td> <a href="/wiki/The_Battle_for_Mount_Maelstrom" title="The Battle for Mount Maelstrom">Megadestroyer</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554273000">06:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Mount_Maelstrom" title="Mount Maelstrom">Mount Maelstrom</a>
+</td>
+<td> <a href="/wiki/Maelstrom%27s_Bile" title="Maelstrom&#39;s Bile">Maelstrom's Bile</a>
+</td>
+<td> <span class="gamelink" id="gamelink-33" data-type="map" data-id="717" title="717"></span><script>gamelink('gamelink-33');</script>
+</td></tr>
+<tr data-time-hh="06" data-time-mm="45">
+<td> <a href="/wiki/Thaumanova_Reactor_Fallout" title="Thaumanova Reactor Fallout">Fire Elemental</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554273900">06:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Metrica_Province" title="Metrica Province">Metrica Province</a>
+</td>
+<td> <a href="/wiki/Thaumanova_Reactor" title="Thaumanova Reactor">Thaumanova Reactor</a>
+</td>
+<td> <span class="gamelink" id="gamelink-34" data-type="map" data-id="71" title="71"></span><script>gamelink('gamelink-34');</script>
+</td></tr>
+<tr data-time-hh="07" data-time-mm="00">
+<td> <a href="/wiki/Kralkatorrik%27s_Legacy" title="Kralkatorrik&#39;s Legacy">The Shatterer</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554274800">07:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Blazeridge_Steppes" title="Blazeridge Steppes">Blazeridge Steppes</a>
+</td>
+<td> <a href="/wiki/Lowland_Burns" title="Lowland Burns">Lowland Burns</a>
+</td>
+<td> <span class="gamelink" id="gamelink-35" data-type="map" data-id="846" title="846"></span><script>gamelink('gamelink-35');</script>
+</td></tr>
+<tr data-time-hh="07" data-time-mm="00">
+<td> <a href="/wiki/Defeat_Tequatl_the_Sunless" title="Defeat Tequatl the Sunless">Tequatl the Sunless</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554274800">07:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Sparkfly_Fen" title="Sparkfly Fen">Sparkfly Fen</a>
+</td>
+<td> <a href="/wiki/Splintered_Coast" title="Splintered Coast">Splintered Coast</a>
+</td>
+<td> <span class="gamelink" id="gamelink-36" data-type="map" data-id="464" title="464"></span><script>gamelink('gamelink-36');</script>
+</td></tr>
+<tr data-time-hh="07" data-time-mm="15">
+<td> <a href="/wiki/The_Battle_for_Wychmire_Swamp" title="The Battle for Wychmire Swamp">Great Jungle Wurm</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554275700">07:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Caledon_Forest" title="Caledon Forest">Caledon Forest</a>
+</td>
+<td> <a href="/wiki/Wychmire_Swamp" title="Wychmire Swamp">Wychmire Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-37" data-type="map" data-id="1345" title="1345"></span><script>gamelink('gamelink-37');</script>
+</td></tr>
+<tr data-time-hh="07" data-time-mm="30">
+<td> <a href="/wiki/Seraph_Assault_on_Centaur_Camps" title="Seraph Assault on Centaur Camps">Modniir Ulgoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554276600">07:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Harathi_Hinterlands" title="Harathi Hinterlands">Harathi Hinterlands</a>
+</td>
+<td> <a href="/wiki/Modniir_Gorge" title="Modniir Gorge">Modniir Gorge</a>
+</td>
+<td> <span class="gamelink" id="gamelink-38" data-type="map" data-id="176" title="176"></span><script>gamelink('gamelink-38');</script>
+</td></tr>
+<tr data-time-hh="07" data-time-mm="45">
+<td> <a href="/wiki/Secrets_in_the_Swamp" title="Secrets in the Swamp">Shadow Behemoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554277500">07:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Queensdale" title="Queensdale">Queensdale</a>
+</td>
+<td> <a href="/wiki/Godslost_Swamp" title="Godslost Swamp">Godslost Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-39" data-type="map" data-id="247" title="247"></span><script>gamelink('gamelink-39');</script>
+</td></tr>
+<tr data-time-hh="08" data-time-mm="00">
+<td> <a href="/wiki/Defeat_the_Inquest%27s_golem_Mark_II" title="Defeat the Inquest&#39;s golem Mark II">Golem Mark II</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554278400">08:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Mount_Maelstrom" title="Mount Maelstrom">Mount Maelstrom</a>
+</td>
+<td> <a href="/wiki/Whitland_Flats" title="Whitland Flats">Whitland Flats</a>
+</td>
+<td> <span class="gamelink" id="gamelink-40" data-type="map" data-id="724" title="724"></span><script>gamelink('gamelink-40');</script>
+</td></tr>
+<tr data-time-hh="08" data-time-mm="00">
+<td> <a href="/wiki/Triple_Trouble" title="Triple Trouble">Evolved Jungle Wurm</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554278400">08:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Bloodtide_Coast" title="Bloodtide Coast">Bloodtide Coast</a>
+</td>
+<td> <a href="/wiki/Firth_of_Revanion" title="Firth of Revanion">Firth of Revanion</a>
+</td>
+<td> <span class="gamelink" id="gamelink-41" data-type="map" data-id="426" title="426"></span><script>gamelink('gamelink-41');</script>
+</td></tr>
+<tr data-time-hh="08" data-time-mm="15">
+<td> <a href="/wiki/The_Frozen_Maw" title="The Frozen Maw">Svanir Shaman Chief</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554279300">08:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Wayfarer_Foothills" title="Wayfarer Foothills">Wayfarer Foothills</a>
+</td>
+<td> <a href="/wiki/Hunter%27s_Lake" title="Hunter&#39;s Lake">Hunter's Lake</a>
+</td>
+<td> <span class="gamelink" id="gamelink-42" data-type="map" data-id="962" title="962"></span><script>gamelink('gamelink-42');</script>
+</td></tr>
+<tr data-time-hh="08" data-time-mm="30">
+<td> <a href="/wiki/Breaking_the_Claw_of_Jormag" title="Breaking the Claw of Jormag">Claw of Jormag</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554280200">08:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Frostgorge_Sound" title="Frostgorge Sound">Frostgorge Sound</a>
+</td>
+<td> <a href="/wiki/Frostwalk_Tundra" title="Frostwalk Tundra">Frostwalk Tundra</a>
+</td>
+<td> <span class="gamelink" id="gamelink-43" data-type="map" data-id="634" title="634"></span><script>gamelink('gamelink-43');</script>
+</td></tr>
+<tr data-time-hh="08" data-time-mm="45">
+<td> <a href="/wiki/Thaumanova_Reactor_Fallout" title="Thaumanova Reactor Fallout">Fire Elemental</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554281100">08:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Metrica_Province" title="Metrica Province">Metrica Province</a>
+</td>
+<td> <a href="/wiki/Thaumanova_Reactor" title="Thaumanova Reactor">Thaumanova Reactor</a>
+</td>
+<td> <span class="gamelink" id="gamelink-44" data-type="map" data-id="71" title="71"></span><script>gamelink('gamelink-44');</script>
+</td></tr>
+<tr data-time-hh="09" data-time-mm="00">
+<td> <a href="/wiki/The_Campaign_Against_Taidha_Covington" title="The Campaign Against Taidha Covington">Admiral Taidha Covington</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554282000">09:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Bloodtide_Coast" title="Bloodtide Coast">Bloodtide Coast</a>
+</td>
+<td> <a href="/wiki/Laughing_Gull_Island" title="Laughing Gull Island">Laughing Gull Island</a>
+</td>
+<td> <span class="gamelink" id="gamelink-45" data-type="map" data-id="424" title="424"></span><script>gamelink('gamelink-45');</script>
+</td></tr>
+<tr data-time-hh="09" data-time-mm="15">
+<td> <a href="/wiki/The_Battle_for_Wychmire_Swamp" title="The Battle for Wychmire Swamp">Great Jungle Wurm</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554282900">09:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Caledon_Forest" title="Caledon Forest">Caledon Forest</a>
+</td>
+<td> <a href="/wiki/Wychmire_Swamp" title="Wychmire Swamp">Wychmire Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-46" data-type="map" data-id="1345" title="1345"></span><script>gamelink('gamelink-46');</script>
+</td></tr>
+<tr data-time-hh="09" data-time-mm="30">
+<td> <a href="/wiki/The_Battle_for_Mount_Maelstrom" title="The Battle for Mount Maelstrom">Megadestroyer</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554283800">09:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Mount_Maelstrom" title="Mount Maelstrom">Mount Maelstrom</a>
+</td>
+<td> <a href="/wiki/Maelstrom%27s_Bile" title="Maelstrom&#39;s Bile">Maelstrom's Bile</a>
+</td>
+<td> <span class="gamelink" id="gamelink-47" data-type="map" data-id="717" title="717"></span><script>gamelink('gamelink-47');</script>
+</td></tr>
+<tr data-time-hh="09" data-time-mm="45">
+<td> <a href="/wiki/Secrets_in_the_Swamp" title="Secrets in the Swamp">Shadow Behemoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554284700">09:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Queensdale" title="Queensdale">Queensdale</a>
+</td>
+<td> <a href="/wiki/Godslost_Swamp" title="Godslost Swamp">Godslost Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-48" data-type="map" data-id="247" title="247"></span><script>gamelink('gamelink-48');</script>
+</td></tr>
+<tr data-time-hh="10" data-time-mm="00">
+<td> <a href="/wiki/Kralkatorrik%27s_Legacy" title="Kralkatorrik&#39;s Legacy">The Shatterer</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554285600">10:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Blazeridge_Steppes" title="Blazeridge Steppes">Blazeridge Steppes</a>
+</td>
+<td> <a href="/wiki/Lowland_Burns" title="Lowland Burns">Lowland Burns</a>
+</td>
+<td> <span class="gamelink" id="gamelink-49" data-type="map" data-id="846" title="846"></span><script>gamelink('gamelink-49');</script>
+</td></tr>
+<tr data-time-hh="10" data-time-mm="15">
+<td> <a href="/wiki/The_Frozen_Maw" title="The Frozen Maw">Svanir Shaman Chief</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554286500">10:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Wayfarer_Foothills" title="Wayfarer Foothills">Wayfarer Foothills</a>
+</td>
+<td> <a href="/wiki/Hunter%27s_Lake" title="Hunter&#39;s Lake">Hunter's Lake</a>
+</td>
+<td> <span class="gamelink" id="gamelink-50" data-type="map" data-id="962" title="962"></span><script>gamelink('gamelink-50');</script>
+</td></tr>
+<tr data-time-hh="10" data-time-mm="30">
+<td> <a href="/wiki/Seraph_Assault_on_Centaur_Camps" title="Seraph Assault on Centaur Camps">Modniir Ulgoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554287400">10:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Harathi_Hinterlands" title="Harathi Hinterlands">Harathi Hinterlands</a>
+</td>
+<td> <a href="/wiki/Modniir_Gorge" title="Modniir Gorge">Modniir Gorge</a>
+</td>
+<td> <span class="gamelink" id="gamelink-51" data-type="map" data-id="176" title="176"></span><script>gamelink('gamelink-51');</script>
+</td></tr>
+<tr data-time-hh="10" data-time-mm="30">
+<td> <a href="/wiki/Defeat_the_Karka_Queen_threatening_the_settlements" title="Defeat the Karka Queen threatening the settlements">Karka Queen</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554287400">10:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Southsun_Cove" title="Southsun Cove">Southsun Cove</a>
+</td>
+<td> <a href="/wiki/Driftglass_Springs" title="Driftglass Springs">Driftglass Springs</a>
+</td>
+<td> <span class="gamelink" id="gamelink-52" data-type="map" data-id="1749" title="1749"></span><script>gamelink('gamelink-52');</script>
+</td></tr>
+<tr data-time-hh="10" data-time-mm="45">
+<td> <a href="/wiki/Thaumanova_Reactor_Fallout" title="Thaumanova Reactor Fallout">Fire Elemental</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554288300">10:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Metrica_Province" title="Metrica Province">Metrica Province</a>
+</td>
+<td> <a href="/wiki/Thaumanova_Reactor" title="Thaumanova Reactor">Thaumanova Reactor</a>
+</td>
+<td> <span class="gamelink" id="gamelink-53" data-type="map" data-id="71" title="71"></span><script>gamelink('gamelink-53');</script>
+</td></tr>
+<tr data-time-hh="11" data-time-mm="00">
+<td> <a href="/wiki/Defeat_the_Inquest%27s_golem_Mark_II" title="Defeat the Inquest&#39;s golem Mark II">Golem Mark II</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554289200">11:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Mount_Maelstrom" title="Mount Maelstrom">Mount Maelstrom</a>
+</td>
+<td> <a href="/wiki/Whitland_Flats" title="Whitland Flats">Whitland Flats</a>
+</td>
+<td> <span class="gamelink" id="gamelink-54" data-type="map" data-id="724" title="724"></span><script>gamelink('gamelink-54');</script>
+</td></tr>
+<tr data-time-hh="11" data-time-mm="15">
+<td> <a href="/wiki/The_Battle_for_Wychmire_Swamp" title="The Battle for Wychmire Swamp">Great Jungle Wurm</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554290100">11:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Caledon_Forest" title="Caledon Forest">Caledon Forest</a>
+</td>
+<td> <a href="/wiki/Wychmire_Swamp" title="Wychmire Swamp">Wychmire Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-55" data-type="map" data-id="1345" title="1345"></span><script>gamelink('gamelink-55');</script>
+</td></tr>
+<tr data-time-hh="11" data-time-mm="30">
+<td> <a href="/wiki/Breaking_the_Claw_of_Jormag" title="Breaking the Claw of Jormag">Claw of Jormag</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554291000">11:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Frostgorge_Sound" title="Frostgorge Sound">Frostgorge Sound</a>
+</td>
+<td> <a href="/wiki/Frostwalk_Tundra" title="Frostwalk Tundra">Frostwalk Tundra</a>
+</td>
+<td> <span class="gamelink" id="gamelink-56" data-type="map" data-id="634" title="634"></span><script>gamelink('gamelink-56');</script>
+</td></tr>
+<tr data-time-hh="11" data-time-mm="30">
+<td> <a href="/wiki/Defeat_Tequatl_the_Sunless" title="Defeat Tequatl the Sunless">Tequatl the Sunless</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554291000">11:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Sparkfly_Fen" title="Sparkfly Fen">Sparkfly Fen</a>
+</td>
+<td> <a href="/wiki/Splintered_Coast" title="Splintered Coast">Splintered Coast</a>
+</td>
+<td> <span class="gamelink" id="gamelink-57" data-type="map" data-id="464" title="464"></span><script>gamelink('gamelink-57');</script>
+</td></tr>
+<tr data-time-hh="11" data-time-mm="45">
+<td> <a href="/wiki/Secrets_in_the_Swamp" title="Secrets in the Swamp">Shadow Behemoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554291900">11:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Queensdale" title="Queensdale">Queensdale</a>
+</td>
+<td> <a href="/wiki/Godslost_Swamp" title="Godslost Swamp">Godslost Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-58" data-type="map" data-id="247" title="247"></span><script>gamelink('gamelink-58');</script>
+</td></tr>
+<tr data-time-hh="12" data-time-mm="00">
+<td> <a href="/wiki/The_Campaign_Against_Taidha_Covington" title="The Campaign Against Taidha Covington">Admiral Taidha Covington</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554292800">12:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Bloodtide_Coast" title="Bloodtide Coast">Bloodtide Coast</a>
+</td>
+<td> <a href="/wiki/Laughing_Gull_Island" title="Laughing Gull Island">Laughing Gull Island</a>
+</td>
+<td> <span class="gamelink" id="gamelink-59" data-type="map" data-id="424" title="424"></span><script>gamelink('gamelink-59');</script>
+</td></tr>
+<tr data-time-hh="12" data-time-mm="15">
+<td> <a href="/wiki/The_Frozen_Maw" title="The Frozen Maw">Svanir Shaman Chief</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554293700">12:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Wayfarer_Foothills" title="Wayfarer Foothills">Wayfarer Foothills</a>
+</td>
+<td> <a href="/wiki/Hunter%27s_Lake" title="Hunter&#39;s Lake">Hunter's Lake</a>
+</td>
+<td> <span class="gamelink" id="gamelink-60" data-type="map" data-id="962" title="962"></span><script>gamelink('gamelink-60');</script>
+</td></tr>
+<tr data-time-hh="12" data-time-mm="30">
+<td> <a href="/wiki/The_Battle_for_Mount_Maelstrom" title="The Battle for Mount Maelstrom">Megadestroyer</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554294600">12:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Mount_Maelstrom" title="Mount Maelstrom">Mount Maelstrom</a>
+</td>
+<td> <a href="/wiki/Maelstrom%27s_Bile" title="Maelstrom&#39;s Bile">Maelstrom's Bile</a>
+</td>
+<td> <span class="gamelink" id="gamelink-61" data-type="map" data-id="717" title="717"></span><script>gamelink('gamelink-61');</script>
+</td></tr>
+<tr data-time-hh="12" data-time-mm="30">
+<td> <a href="/wiki/Triple_Trouble" title="Triple Trouble">Evolved Jungle Wurm</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554294600">12:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Bloodtide_Coast" title="Bloodtide Coast">Bloodtide Coast</a>
+</td>
+<td> <a href="/wiki/Firth_of_Revanion" title="Firth of Revanion">Firth of Revanion</a>
+</td>
+<td> <span class="gamelink" id="gamelink-62" data-type="map" data-id="426" title="426"></span><script>gamelink('gamelink-62');</script>
+</td></tr>
+<tr data-time-hh="12" data-time-mm="45">
+<td> <a href="/wiki/Thaumanova_Reactor_Fallout" title="Thaumanova Reactor Fallout">Fire Elemental</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554295500">12:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Metrica_Province" title="Metrica Province">Metrica Province</a>
+</td>
+<td> <a href="/wiki/Thaumanova_Reactor" title="Thaumanova Reactor">Thaumanova Reactor</a>
+</td>
+<td> <span class="gamelink" id="gamelink-63" data-type="map" data-id="71" title="71"></span><script>gamelink('gamelink-63');</script>
+</td></tr>
+<tr data-time-hh="13" data-time-mm="00">
+<td> <a href="/wiki/Kralkatorrik%27s_Legacy" title="Kralkatorrik&#39;s Legacy">The Shatterer</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554296400">13:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Blazeridge_Steppes" title="Blazeridge Steppes">Blazeridge Steppes</a>
+</td>
+<td> <a href="/wiki/Lowland_Burns" title="Lowland Burns">Lowland Burns</a>
+</td>
+<td> <span class="gamelink" id="gamelink-64" data-type="map" data-id="846" title="846"></span><script>gamelink('gamelink-64');</script>
+</td></tr>
+<tr data-time-hh="13" data-time-mm="15">
+<td> <a href="/wiki/The_Battle_for_Wychmire_Swamp" title="The Battle for Wychmire Swamp">Great Jungle Wurm</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554297300">13:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Caledon_Forest" title="Caledon Forest">Caledon Forest</a>
+</td>
+<td> <a href="/wiki/Wychmire_Swamp" title="Wychmire Swamp">Wychmire Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-65" data-type="map" data-id="1345" title="1345"></span><script>gamelink('gamelink-65');</script>
+</td></tr>
+<tr data-time-hh="13" data-time-mm="30">
+<td> <a href="/wiki/Seraph_Assault_on_Centaur_Camps" title="Seraph Assault on Centaur Camps">Modniir Ulgoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554298200">13:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Harathi_Hinterlands" title="Harathi Hinterlands">Harathi Hinterlands</a>
+</td>
+<td> <a href="/wiki/Modniir_Gorge" title="Modniir Gorge">Modniir Gorge</a>
+</td>
+<td> <span class="gamelink" id="gamelink-66" data-type="map" data-id="176" title="176"></span><script>gamelink('gamelink-66');</script>
+</td></tr>
+<tr data-time-hh="13" data-time-mm="45">
+<td> <a href="/wiki/Secrets_in_the_Swamp" title="Secrets in the Swamp">Shadow Behemoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554299100">13:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Queensdale" title="Queensdale">Queensdale</a>
+</td>
+<td> <a href="/wiki/Godslost_Swamp" title="Godslost Swamp">Godslost Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-67" data-type="map" data-id="247" title="247"></span><script>gamelink('gamelink-67');</script>
+</td></tr>
+<tr data-time-hh="14" data-time-mm="00">
+<td> <a href="/wiki/Defeat_the_Inquest%27s_golem_Mark_II" title="Defeat the Inquest&#39;s golem Mark II">Golem Mark II</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554300000">14:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Mount_Maelstrom" title="Mount Maelstrom">Mount Maelstrom</a>
+</td>
+<td> <a href="/wiki/Whitland_Flats" title="Whitland Flats">Whitland Flats</a>
+</td>
+<td> <span class="gamelink" id="gamelink-68" data-type="map" data-id="724" title="724"></span><script>gamelink('gamelink-68');</script>
+</td></tr>
+<tr data-time-hh="14" data-time-mm="15">
+<td> <a href="/wiki/The_Frozen_Maw" title="The Frozen Maw">Svanir Shaman Chief</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554300900">14:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Wayfarer_Foothills" title="Wayfarer Foothills">Wayfarer Foothills</a>
+</td>
+<td> <a href="/wiki/Hunter%27s_Lake" title="Hunter&#39;s Lake">Hunter's Lake</a>
+</td>
+<td> <span class="gamelink" id="gamelink-69" data-type="map" data-id="962" title="962"></span><script>gamelink('gamelink-69');</script>
+</td></tr>
+<tr data-time-hh="14" data-time-mm="30">
+<td> <a href="/wiki/Breaking_the_Claw_of_Jormag" title="Breaking the Claw of Jormag">Claw of Jormag</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554301800">14:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Frostgorge_Sound" title="Frostgorge Sound">Frostgorge Sound</a>
+</td>
+<td> <a href="/wiki/Frostwalk_Tundra" title="Frostwalk Tundra">Frostwalk Tundra</a>
+</td>
+<td> <span class="gamelink" id="gamelink-70" data-type="map" data-id="634" title="634"></span><script>gamelink('gamelink-70');</script>
+</td></tr>
+<tr data-time-hh="14" data-time-mm="45">
+<td> <a href="/wiki/Thaumanova_Reactor_Fallout" title="Thaumanova Reactor Fallout">Fire Elemental</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554302700">14:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Metrica_Province" title="Metrica Province">Metrica Province</a>
+</td>
+<td> <a href="/wiki/Thaumanova_Reactor" title="Thaumanova Reactor">Thaumanova Reactor</a>
+</td>
+<td> <span class="gamelink" id="gamelink-71" data-type="map" data-id="71" title="71"></span><script>gamelink('gamelink-71');</script>
+</td></tr>
+<tr data-time-hh="15" data-time-mm="00">
+<td> <a href="/wiki/The_Campaign_Against_Taidha_Covington" title="The Campaign Against Taidha Covington">Admiral Taidha Covington</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554303600">15:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Bloodtide_Coast" title="Bloodtide Coast">Bloodtide Coast</a>
+</td>
+<td> <a href="/wiki/Laughing_Gull_Island" title="Laughing Gull Island">Laughing Gull Island</a>
+</td>
+<td> <span class="gamelink" id="gamelink-72" data-type="map" data-id="424" title="424"></span><script>gamelink('gamelink-72');</script>
+</td></tr>
+<tr data-time-hh="15" data-time-mm="00">
+<td> <a href="/wiki/Defeat_the_Karka_Queen_threatening_the_settlements" title="Defeat the Karka Queen threatening the settlements">Karka Queen</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554303600">15:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Southsun_Cove" title="Southsun Cove">Southsun Cove</a>
+</td>
+<td> <a href="/wiki/Driftglass_Springs" title="Driftglass Springs">Driftglass Springs</a>
+</td>
+<td> <span class="gamelink" id="gamelink-73" data-type="map" data-id="1749" title="1749"></span><script>gamelink('gamelink-73');</script>
+</td></tr>
+<tr data-time-hh="15" data-time-mm="15">
+<td> <a href="/wiki/The_Battle_for_Wychmire_Swamp" title="The Battle for Wychmire Swamp">Great Jungle Wurm</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554304500">15:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Caledon_Forest" title="Caledon Forest">Caledon Forest</a>
+</td>
+<td> <a href="/wiki/Wychmire_Swamp" title="Wychmire Swamp">Wychmire Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-74" data-type="map" data-id="1345" title="1345"></span><script>gamelink('gamelink-74');</script>
+</td></tr>
+<tr data-time-hh="15" data-time-mm="30">
+<td> <a href="/wiki/The_Battle_for_Mount_Maelstrom" title="The Battle for Mount Maelstrom">Megadestroyer</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554305400">15:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Mount_Maelstrom" title="Mount Maelstrom">Mount Maelstrom</a>
+</td>
+<td> <a href="/wiki/Maelstrom%27s_Bile" title="Maelstrom&#39;s Bile">Maelstrom's Bile</a>
+</td>
+<td> <span class="gamelink" id="gamelink-75" data-type="map" data-id="717" title="717"></span><script>gamelink('gamelink-75');</script>
+</td></tr>
+<tr data-time-hh="15" data-time-mm="45">
+<td> <a href="/wiki/Secrets_in_the_Swamp" title="Secrets in the Swamp">Shadow Behemoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554306300">15:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Queensdale" title="Queensdale">Queensdale</a>
+</td>
+<td> <a href="/wiki/Godslost_Swamp" title="Godslost Swamp">Godslost Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-76" data-type="map" data-id="247" title="247"></span><script>gamelink('gamelink-76');</script>
+</td></tr>
+<tr data-time-hh="16" data-time-mm="00">
+<td> <a href="/wiki/Kralkatorrik%27s_Legacy" title="Kralkatorrik&#39;s Legacy">The Shatterer</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554307200">16:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Blazeridge_Steppes" title="Blazeridge Steppes">Blazeridge Steppes</a>
+</td>
+<td> <a href="/wiki/Lowland_Burns" title="Lowland Burns">Lowland Burns</a>
+</td>
+<td> <span class="gamelink" id="gamelink-77" data-type="map" data-id="846" title="846"></span><script>gamelink('gamelink-77');</script>
+</td></tr>
+<tr data-time-hh="16" data-time-mm="00">
+<td> <a href="/wiki/Defeat_Tequatl_the_Sunless" title="Defeat Tequatl the Sunless">Tequatl the Sunless</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554307200">16:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Sparkfly_Fen" title="Sparkfly Fen">Sparkfly Fen</a>
+</td>
+<td> <a href="/wiki/Splintered_Coast" title="Splintered Coast">Splintered Coast</a>
+</td>
+<td> <span class="gamelink" id="gamelink-78" data-type="map" data-id="464" title="464"></span><script>gamelink('gamelink-78');</script>
+</td></tr>
+<tr data-time-hh="16" data-time-mm="15">
+<td> <a href="/wiki/The_Frozen_Maw" title="The Frozen Maw">Svanir Shaman Chief</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554308100">16:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Wayfarer_Foothills" title="Wayfarer Foothills">Wayfarer Foothills</a>
+</td>
+<td> <a href="/wiki/Hunter%27s_Lake" title="Hunter&#39;s Lake">Hunter's Lake</a>
+</td>
+<td> <span class="gamelink" id="gamelink-79" data-type="map" data-id="962" title="962"></span><script>gamelink('gamelink-79');</script>
+</td></tr>
+<tr data-time-hh="16" data-time-mm="30">
+<td> <a href="/wiki/Seraph_Assault_on_Centaur_Camps" title="Seraph Assault on Centaur Camps">Modniir Ulgoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554309000">16:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Harathi_Hinterlands" title="Harathi Hinterlands">Harathi Hinterlands</a>
+</td>
+<td> <a href="/wiki/Modniir_Gorge" title="Modniir Gorge">Modniir Gorge</a>
+</td>
+<td> <span class="gamelink" id="gamelink-80" data-type="map" data-id="176" title="176"></span><script>gamelink('gamelink-80');</script>
+</td></tr>
+<tr data-time-hh="16" data-time-mm="45">
+<td> <a href="/wiki/Thaumanova_Reactor_Fallout" title="Thaumanova Reactor Fallout">Fire Elemental</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554309900">16:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Metrica_Province" title="Metrica Province">Metrica Province</a>
+</td>
+<td> <a href="/wiki/Thaumanova_Reactor" title="Thaumanova Reactor">Thaumanova Reactor</a>
+</td>
+<td> <span class="gamelink" id="gamelink-81" data-type="map" data-id="71" title="71"></span><script>gamelink('gamelink-81');</script>
+</td></tr>
+<tr data-time-hh="17" data-time-mm="00">
+<td> <a href="/wiki/Defeat_the_Inquest%27s_golem_Mark_II" title="Defeat the Inquest&#39;s golem Mark II">Golem Mark II</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554310800">17:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Mount_Maelstrom" title="Mount Maelstrom">Mount Maelstrom</a>
+</td>
+<td> <a href="/wiki/Whitland_Flats" title="Whitland Flats">Whitland Flats</a>
+</td>
+<td> <span class="gamelink" id="gamelink-82" data-type="map" data-id="724" title="724"></span><script>gamelink('gamelink-82');</script>
+</td></tr>
+<tr data-time-hh="17" data-time-mm="00">
+<td> <a href="/wiki/Triple_Trouble" title="Triple Trouble">Evolved Jungle Wurm</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554310800">17:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Bloodtide_Coast" title="Bloodtide Coast">Bloodtide Coast</a>
+</td>
+<td> <a href="/wiki/Firth_of_Revanion" title="Firth of Revanion">Firth of Revanion</a>
+</td>
+<td> <span class="gamelink" id="gamelink-83" data-type="map" data-id="426" title="426"></span><script>gamelink('gamelink-83');</script>
+</td></tr>
+<tr data-time-hh="17" data-time-mm="15">
+<td> <a href="/wiki/The_Battle_for_Wychmire_Swamp" title="The Battle for Wychmire Swamp">Great Jungle Wurm</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554311700">17:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Caledon_Forest" title="Caledon Forest">Caledon Forest</a>
+</td>
+<td> <a href="/wiki/Wychmire_Swamp" title="Wychmire Swamp">Wychmire Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-84" data-type="map" data-id="1345" title="1345"></span><script>gamelink('gamelink-84');</script>
+</td></tr>
+<tr data-time-hh="17" data-time-mm="30">
+<td> <a href="/wiki/Breaking_the_Claw_of_Jormag" title="Breaking the Claw of Jormag">Claw of Jormag</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554312600">17:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Frostgorge_Sound" title="Frostgorge Sound">Frostgorge Sound</a>
+</td>
+<td> <a href="/wiki/Frostwalk_Tundra" title="Frostwalk Tundra">Frostwalk Tundra</a>
+</td>
+<td> <span class="gamelink" id="gamelink-85" data-type="map" data-id="634" title="634"></span><script>gamelink('gamelink-85');</script>
+</td></tr>
+<tr data-time-hh="17" data-time-mm="45">
+<td> <a href="/wiki/Secrets_in_the_Swamp" title="Secrets in the Swamp">Shadow Behemoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554313500">17:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Queensdale" title="Queensdale">Queensdale</a>
+</td>
+<td> <a href="/wiki/Godslost_Swamp" title="Godslost Swamp">Godslost Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-86" data-type="map" data-id="247" title="247"></span><script>gamelink('gamelink-86');</script>
+</td></tr>
+<tr data-time-hh="18" data-time-mm="00">
+<td> <a href="/wiki/The_Campaign_Against_Taidha_Covington" title="The Campaign Against Taidha Covington">Admiral Taidha Covington</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554314400">18:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Bloodtide_Coast" title="Bloodtide Coast">Bloodtide Coast</a>
+</td>
+<td> <a href="/wiki/Laughing_Gull_Island" title="Laughing Gull Island">Laughing Gull Island</a>
+</td>
+<td> <span class="gamelink" id="gamelink-87" data-type="map" data-id="424" title="424"></span><script>gamelink('gamelink-87');</script>
+</td></tr>
+<tr data-time-hh="18" data-time-mm="00">
+<td> <a href="/wiki/Defeat_the_Karka_Queen_threatening_the_settlements" title="Defeat the Karka Queen threatening the settlements">Karka Queen</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554314400">18:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Southsun_Cove" title="Southsun Cove">Southsun Cove</a>
+</td>
+<td> <a href="/wiki/Driftglass_Springs" title="Driftglass Springs">Driftglass Springs</a>
+</td>
+<td> <span class="gamelink" id="gamelink-88" data-type="map" data-id="1749" title="1749"></span><script>gamelink('gamelink-88');</script>
+</td></tr>
+<tr data-time-hh="18" data-time-mm="15">
+<td> <a href="/wiki/The_Frozen_Maw" title="The Frozen Maw">Svanir Shaman Chief</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554315300">18:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Wayfarer_Foothills" title="Wayfarer Foothills">Wayfarer Foothills</a>
+</td>
+<td> <a href="/wiki/Hunter%27s_Lake" title="Hunter&#39;s Lake">Hunter's Lake</a>
+</td>
+<td> <span class="gamelink" id="gamelink-89" data-type="map" data-id="962" title="962"></span><script>gamelink('gamelink-89');</script>
+</td></tr>
+<tr data-time-hh="18" data-time-mm="30">
+<td> <a href="/wiki/The_Battle_for_Mount_Maelstrom" title="The Battle for Mount Maelstrom">Megadestroyer</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554316200">18:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Mount_Maelstrom" title="Mount Maelstrom">Mount Maelstrom</a>
+</td>
+<td> <a href="/wiki/Maelstrom%27s_Bile" title="Maelstrom&#39;s Bile">Maelstrom's Bile</a>
+</td>
+<td> <span class="gamelink" id="gamelink-90" data-type="map" data-id="717" title="717"></span><script>gamelink('gamelink-90');</script>
+</td></tr>
+<tr data-time-hh="18" data-time-mm="45">
+<td> <a href="/wiki/Thaumanova_Reactor_Fallout" title="Thaumanova Reactor Fallout">Fire Elemental</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554317100">18:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Metrica_Province" title="Metrica Province">Metrica Province</a>
+</td>
+<td> <a href="/wiki/Thaumanova_Reactor" title="Thaumanova Reactor">Thaumanova Reactor</a>
+</td>
+<td> <span class="gamelink" id="gamelink-91" data-type="map" data-id="71" title="71"></span><script>gamelink('gamelink-91');</script>
+</td></tr>
+<tr data-time-hh="19" data-time-mm="00">
+<td> <a href="/wiki/Kralkatorrik%27s_Legacy" title="Kralkatorrik&#39;s Legacy">The Shatterer</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554318000">19:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Blazeridge_Steppes" title="Blazeridge Steppes">Blazeridge Steppes</a>
+</td>
+<td> <a href="/wiki/Lowland_Burns" title="Lowland Burns">Lowland Burns</a>
+</td>
+<td> <span class="gamelink" id="gamelink-92" data-type="map" data-id="846" title="846"></span><script>gamelink('gamelink-92');</script>
+</td></tr>
+<tr data-time-hh="19" data-time-mm="00">
+<td> <a href="/wiki/Defeat_Tequatl_the_Sunless" title="Defeat Tequatl the Sunless">Tequatl the Sunless</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554318000">19:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Sparkfly_Fen" title="Sparkfly Fen">Sparkfly Fen</a>
+</td>
+<td> <a href="/wiki/Splintered_Coast" title="Splintered Coast">Splintered Coast</a>
+</td>
+<td> <span class="gamelink" id="gamelink-93" data-type="map" data-id="464" title="464"></span><script>gamelink('gamelink-93');</script>
+</td></tr>
+<tr data-time-hh="19" data-time-mm="15">
+<td> <a href="/wiki/The_Battle_for_Wychmire_Swamp" title="The Battle for Wychmire Swamp">Great Jungle Wurm</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554318900">19:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Caledon_Forest" title="Caledon Forest">Caledon Forest</a>
+</td>
+<td> <a href="/wiki/Wychmire_Swamp" title="Wychmire Swamp">Wychmire Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-94" data-type="map" data-id="1345" title="1345"></span><script>gamelink('gamelink-94');</script>
+</td></tr>
+<tr data-time-hh="19" data-time-mm="30">
+<td> <a href="/wiki/Seraph_Assault_on_Centaur_Camps" title="Seraph Assault on Centaur Camps">Modniir Ulgoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554319800">19:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Harathi_Hinterlands" title="Harathi Hinterlands">Harathi Hinterlands</a>
+</td>
+<td> <a href="/wiki/Modniir_Gorge" title="Modniir Gorge">Modniir Gorge</a>
+</td>
+<td> <span class="gamelink" id="gamelink-95" data-type="map" data-id="176" title="176"></span><script>gamelink('gamelink-95');</script>
+</td></tr>
+<tr data-time-hh="19" data-time-mm="45">
+<td> <a href="/wiki/Secrets_in_the_Swamp" title="Secrets in the Swamp">Shadow Behemoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554320700">19:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Queensdale" title="Queensdale">Queensdale</a>
+</td>
+<td> <a href="/wiki/Godslost_Swamp" title="Godslost Swamp">Godslost Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-96" data-type="map" data-id="247" title="247"></span><script>gamelink('gamelink-96');</script>
+</td></tr>
+<tr data-time-hh="20" data-time-mm="00">
+<td> <a href="/wiki/Defeat_the_Inquest%27s_golem_Mark_II" title="Defeat the Inquest&#39;s golem Mark II">Golem Mark II</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554321600">20:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Mount_Maelstrom" title="Mount Maelstrom">Mount Maelstrom</a>
+</td>
+<td> <a href="/wiki/Whitland_Flats" title="Whitland Flats">Whitland Flats</a>
+</td>
+<td> <span class="gamelink" id="gamelink-97" data-type="map" data-id="724" title="724"></span><script>gamelink('gamelink-97');</script>
+</td></tr>
+<tr data-time-hh="20" data-time-mm="00">
+<td> <a href="/wiki/Triple_Trouble" title="Triple Trouble">Evolved Jungle Wurm</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554321600">20:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Bloodtide_Coast" title="Bloodtide Coast">Bloodtide Coast</a>
+</td>
+<td> <a href="/wiki/Firth_of_Revanion" title="Firth of Revanion">Firth of Revanion</a>
+</td>
+<td> <span class="gamelink" id="gamelink-98" data-type="map" data-id="426" title="426"></span><script>gamelink('gamelink-98');</script>
+</td></tr>
+<tr data-time-hh="20" data-time-mm="15">
+<td> <a href="/wiki/The_Frozen_Maw" title="The Frozen Maw">Svanir Shaman Chief</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554322500">20:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Wayfarer_Foothills" title="Wayfarer Foothills">Wayfarer Foothills</a>
+</td>
+<td> <a href="/wiki/Hunter%27s_Lake" title="Hunter&#39;s Lake">Hunter's Lake</a>
+</td>
+<td> <span class="gamelink" id="gamelink-99" data-type="map" data-id="962" title="962"></span><script>gamelink('gamelink-99');</script>
+</td></tr>
+<tr data-time-hh="20" data-time-mm="30">
+<td> <a href="/wiki/Breaking_the_Claw_of_Jormag" title="Breaking the Claw of Jormag">Claw of Jormag</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554323400">20:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Frostgorge_Sound" title="Frostgorge Sound">Frostgorge Sound</a>
+</td>
+<td> <a href="/wiki/Frostwalk_Tundra" title="Frostwalk Tundra">Frostwalk Tundra</a>
+</td>
+<td> <span class="gamelink" id="gamelink-100" data-type="map" data-id="634" title="634"></span><script>gamelink('gamelink-100');</script>
+</td></tr>
+<tr data-time-hh="20" data-time-mm="45">
+<td> <a href="/wiki/Thaumanova_Reactor_Fallout" title="Thaumanova Reactor Fallout">Fire Elemental</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554324300">20:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Metrica_Province" title="Metrica Province">Metrica Province</a>
+</td>
+<td> <a href="/wiki/Thaumanova_Reactor" title="Thaumanova Reactor">Thaumanova Reactor</a>
+</td>
+<td> <span class="gamelink" id="gamelink-101" data-type="map" data-id="71" title="71"></span><script>gamelink('gamelink-101');</script>
+</td></tr>
+<tr data-time-hh="21" data-time-mm="00">
+<td> <a href="/wiki/The_Campaign_Against_Taidha_Covington" title="The Campaign Against Taidha Covington">Admiral Taidha Covington</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554325200">21:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Bloodtide_Coast" title="Bloodtide Coast">Bloodtide Coast</a>
+</td>
+<td> <a href="/wiki/Laughing_Gull_Island" title="Laughing Gull Island">Laughing Gull Island</a>
+</td>
+<td> <span class="gamelink" id="gamelink-102" data-type="map" data-id="424" title="424"></span><script>gamelink('gamelink-102');</script>
+</td></tr>
+<tr data-time-hh="21" data-time-mm="15">
+<td> <a href="/wiki/The_Battle_for_Wychmire_Swamp" title="The Battle for Wychmire Swamp">Great Jungle Wurm</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554326100">21:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Caledon_Forest" title="Caledon Forest">Caledon Forest</a>
+</td>
+<td> <a href="/wiki/Wychmire_Swamp" title="Wychmire Swamp">Wychmire Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-103" data-type="map" data-id="1345" title="1345"></span><script>gamelink('gamelink-103');</script>
+</td></tr>
+<tr data-time-hh="21" data-time-mm="30">
+<td> <a href="/wiki/The_Battle_for_Mount_Maelstrom" title="The Battle for Mount Maelstrom">Megadestroyer</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554327000">21:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Mount_Maelstrom" title="Mount Maelstrom">Mount Maelstrom</a>
+</td>
+<td> <a href="/wiki/Maelstrom%27s_Bile" title="Maelstrom&#39;s Bile">Maelstrom's Bile</a>
+</td>
+<td> <span class="gamelink" id="gamelink-104" data-type="map" data-id="717" title="717"></span><script>gamelink('gamelink-104');</script>
+</td></tr>
+<tr data-time-hh="21" data-time-mm="45">
+<td> <a href="/wiki/Secrets_in_the_Swamp" title="Secrets in the Swamp">Shadow Behemoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554327900">21:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Queensdale" title="Queensdale">Queensdale</a>
+</td>
+<td> <a href="/wiki/Godslost_Swamp" title="Godslost Swamp">Godslost Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-105" data-type="map" data-id="247" title="247"></span><script>gamelink('gamelink-105');</script>
+</td></tr>
+<tr data-time-hh="22" data-time-mm="00">
+<td> <a href="/wiki/Kralkatorrik%27s_Legacy" title="Kralkatorrik&#39;s Legacy">The Shatterer</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554328800">22:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Blazeridge_Steppes" title="Blazeridge Steppes">Blazeridge Steppes</a>
+</td>
+<td> <a href="/wiki/Lowland_Burns" title="Lowland Burns">Lowland Burns</a>
+</td>
+<td> <span class="gamelink" id="gamelink-106" data-type="map" data-id="846" title="846"></span><script>gamelink('gamelink-106');</script>
+</td></tr>
+<tr data-time-hh="22" data-time-mm="15">
+<td> <a href="/wiki/The_Frozen_Maw" title="The Frozen Maw">Svanir Shaman Chief</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554329700">22:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Wayfarer_Foothills" title="Wayfarer Foothills">Wayfarer Foothills</a>
+</td>
+<td> <a href="/wiki/Hunter%27s_Lake" title="Hunter&#39;s Lake">Hunter's Lake</a>
+</td>
+<td> <span class="gamelink" id="gamelink-107" data-type="map" data-id="962" title="962"></span><script>gamelink('gamelink-107');</script>
+</td></tr>
+<tr data-time-hh="22" data-time-mm="30">
+<td> <a href="/wiki/Seraph_Assault_on_Centaur_Camps" title="Seraph Assault on Centaur Camps">Modniir Ulgoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554330600">22:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Harathi_Hinterlands" title="Harathi Hinterlands">Harathi Hinterlands</a>
+</td>
+<td> <a href="/wiki/Modniir_Gorge" title="Modniir Gorge">Modniir Gorge</a>
+</td>
+<td> <span class="gamelink" id="gamelink-108" data-type="map" data-id="176" title="176"></span><script>gamelink('gamelink-108');</script>
+</td></tr>
+<tr data-time-hh="22" data-time-mm="45">
+<td> <a href="/wiki/Thaumanova_Reactor_Fallout" title="Thaumanova Reactor Fallout">Fire Elemental</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554331500">22:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Metrica_Province" title="Metrica Province">Metrica Province</a>
+</td>
+<td> <a href="/wiki/Thaumanova_Reactor" title="Thaumanova Reactor">Thaumanova Reactor</a>
+</td>
+<td> <span class="gamelink" id="gamelink-109" data-type="map" data-id="71" title="71"></span><script>gamelink('gamelink-109');</script>
+</td></tr>
+<tr data-time-hh="23" data-time-mm="00">
+<td> <a href="/wiki/Defeat_the_Inquest%27s_golem_Mark_II" title="Defeat the Inquest&#39;s golem Mark II">Golem Mark II</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554332400">23:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Mount_Maelstrom" title="Mount Maelstrom">Mount Maelstrom</a>
+</td>
+<td> <a href="/wiki/Whitland_Flats" title="Whitland Flats">Whitland Flats</a>
+</td>
+<td> <span class="gamelink" id="gamelink-110" data-type="map" data-id="724" title="724"></span><script>gamelink('gamelink-110');</script>
+</td></tr>
+<tr data-time-hh="23" data-time-mm="00">
+<td> <a href="/wiki/Defeat_the_Karka_Queen_threatening_the_settlements" title="Defeat the Karka Queen threatening the settlements">Karka Queen</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554332400">23:00</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Southsun_Cove" title="Southsun Cove">Southsun Cove</a>
+</td>
+<td> <a href="/wiki/Driftglass_Springs" title="Driftglass Springs">Driftglass Springs</a>
+</td>
+<td> <span class="gamelink" id="gamelink-111" data-type="map" data-id="1749" title="1749"></span><script>gamelink('gamelink-111');</script>
+</td></tr>
+<tr data-time-hh="23" data-time-mm="15">
+<td> <a href="/wiki/The_Battle_for_Wychmire_Swamp" title="The Battle for Wychmire Swamp">Great Jungle Wurm</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554333300">23:15</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Caledon_Forest" title="Caledon Forest">Caledon Forest</a>
+</td>
+<td> <a href="/wiki/Wychmire_Swamp" title="Wychmire Swamp">Wychmire Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-112" data-type="map" data-id="1345" title="1345"></span><script>gamelink('gamelink-112');</script>
+</td></tr>
+<tr data-time-hh="23" data-time-mm="30">
+<td> <a href="/wiki/Breaking_the_Claw_of_Jormag" title="Breaking the Claw of Jormag">Claw of Jormag</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554334200">23:30</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Frostgorge_Sound" title="Frostgorge Sound">Frostgorge Sound</a>
+</td>
+<td> <a href="/wiki/Frostwalk_Tundra" title="Frostwalk Tundra">Frostwalk Tundra</a>
+</td>
+<td> <span class="gamelink" id="gamelink-113" data-type="map" data-id="634" title="634"></span><script>gamelink('gamelink-113');</script>
+</td></tr>
+<tr data-time-hh="23" data-time-mm="45">
+<td> <a href="/wiki/Secrets_in_the_Swamp" title="Secrets in the Swamp">Shadow Behemoth</a>
+</td>
+<td> <span class="utc-auto-convert" data-time="1554335100">23:45</span>
+</td>
+<td class="countdown"> ...
+</td>
+<td> <a href="/wiki/Queensdale" title="Queensdale">Queensdale</a>
+</td>
+<td> <a href="/wiki/Godslost_Swamp" title="Godslost Swamp">Godslost Swamp</a>
+</td>
+<td> <span class="gamelink" id="gamelink-114" data-type="map" data-id="247" title="247"></span><script>gamelink('gamelink-114');</script>
+</td></tr></table>
+<p><style>
+tr.yellow td { background-color: yellow; }
+tr.blue td { background-color: lightblue; }
+</style><script>
+RLQ.push(function () {
+
+// Add leading zeroes to numbers to make them into strings
+function padLeft(num) {
+  return (num < 10 ? '0' : '') + num;
+}
+
+// Convert milliseconds into an HH:MM:SS countdown format
+function countdownText(diffMilliSeconds) {
+  var hours = Math.floor((diffMilliSeconds / 3600000)) % 24;
+  var minutes = Math.floor((diffMilliSeconds / 60000)) % 60;
+  var seconds = Math.floor((diffMilliSeconds /  1000)) % 60;
+  return padLeft(hours) + ':' + padLeft(minutes) + ':' + padLeft(seconds);
+}
+
+// Rearrange table into thead and tbody for ease of sorting, and store UNIX timestamps for next events
+function initialiseTimers() {
+    // Move header row into thead -- https://stackoverflow.com/questions/32889558
+    $('<thead></thead>').prependTo('#world_boss_table').append($('#world_boss_table tr:first'));
+
+    // Date for initialisation comparison with event times
+    var d = new Date();
+
+    // For each row store UNIX milliseconds since 1970
+    $.map( $('#world_boss_table tbody tr'), function(x) {
+        // Fetch hours and minutes
+        var hh = x.attributes['data-time-hh'].value;
+        var mm = x.attributes['data-time-mm'].value;
+
+        // Set a clean date without trailing seconds
+        var ts = new Date( d.getFullYear(), d.getUTCMonth(), d.getUTCDate() );
+        ts.setUTCHours(hh); ts.setUTCMinutes(mm);
+
+        // Check if date is in the past by more than 15 minutes (= 15*60*1000 milliseconds)
+        var diff = (ts - d);
+        if ( diff < (-1 * 15 * 60 * 1000) ){
+            ts.setDate( ts.getDate() + 1 );
+
+            // Recalculate diff
+            diff = diff + (24 * 60 * 60 * 1000);
+        }
+
+        // See if element is in the future by more than 60 minutes
+        if ( showAllRows == false && diff > (60 * 60 * 1000) ){
+            $(x).addClass('hide');
+        }
+
+        $('.fullutc', $(x) ).text( ts.toDateString() + ' ' + ts.toLocaleTimeString('en-GB') );
+
+        // Set the UNIX time since 1970 for later recall
+        $(x).attr('data-time-unix', ts.valueOf() );
+    });
+}
+
+// Apply color styles and sort (but only if necessary)
+function updateDiffAndSort(sortFlag) {
+    // Latest time to count down from
+    d = new Date();
+
+    $.map( $('#world_boss_table tbody tr'), function(x) {
+        // Fetch UNIX time since 1970
+        var unix = Number(x.attributes['data-time-unix'].value);
+
+        // Calculate diff
+        var diff = unix - d;
+
+        // Check if event has expired, if so update the next event UNIX date
+        if (diff < (-1 * 15 * 60 * 1000)){
+            // Hide expired events and update placeholder text
+            $(x).removeClass('yellow');
+            if ( showAllRows == false ) {
+                $(x).addClass('hide');
+                $('.countdown', $(x) ).text('...');
+            }
+
+            // Update diff and next event date
+            diff = diff + (24 * 60 * 60 * 1000);
+            unix = unix + (24 * 60 * 60 * 1000);
+            $(x).attr('data-time-unix', unix );
+
+            // Update countdown text
+            if ( showAllRows == true ) {
+                $('.countdown', $(x) ).text(countdownText(diff));
+            }
+
+            // Overwrite debug date/time text
+            var xd = new Date(unix)
+            $('.fullutc', $(x) ).text( xd.toDateString() + ' ' + xd.toLocaleTimeString('en-GB') );
+
+            // Update sorting flag
+            sortFlag = true;
+        }
+
+        // Determine states if visible
+        if (diff < 0 ) {
+            // Yellow out event and state active
+            $(x).removeClass('blue');
+            $(x).addClass('yellow');
+            $('.countdown', $(x) ).text('Active');
+
+        } else if (diff < (15 * 60 * 1000) ) {
+            // Blue out event and increment second
+            $(x).removeClass('hide');
+            $(x).addClass('blue');
+            $('.countdown', $(x) ).text(countdownText(diff));
+
+        } else if (diff < (60 * 60 * 1000) ) {
+            // Increment second but use default colouring
+            $(x).removeClass('hide');
+            $('.countdown', $(x) ).text(countdownText(diff));
+
+        } else if (showAllRows == true) {
+            $('.countdown', $(x) ).text(countdownText(diff));
+
+        }
+    });
+    // If any elements have expired, the flag will be set, and the table should be sorted.
+    if (sortFlag == true) {
+        // Sort by UNIX timestamp
+        var rows = $('#world_boss_table tbody tr').get();
+        rows.sort(function(a, b){
+            return a.attributes['data-time-unix'].value > b.attributes['data-time-unix'].value;
+        });
+        $.map(rows, function(row) {
+            $('#world_boss_table').children('tbody').append(row);
+        });
+    }
+}
+
+});
+</script>
+You can reach this table from in-game at any time by typing <code>/wiki wb</code> into the chat box.
+</p>
+<h3><span class="mw-headline" id="Full_schedule">Full schedule</span></h3>
+<table class="mech1 mw-collapsible mw-collapsed table">
+<tr>
+<th style="min-width: 150px;"> Event time </th>
+<th style="min-width: 200px;"> World boss </th>
+<th style="min-width: 200px;"> Hardcore world boss
+</th></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554249600">00:00</span> </td>
+<td> <title="Kill Admiral Taidha Covington">Admiral Taidha Covington</td>
+<td> <title="Defeat Tequatl the Sunless">Tequatl the Sunless</a>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554250500">00:15</span> </td>
+<td> <title="Kill the Svanir shaman chief to break his control over the ice elemental">Svanir Shaman Chief</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554251400">00:30</span> </td>
+<td> <title="Kill the megadestroyer before it blows everyone up">Megadestroyer</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554252300">00:45</span> </td>
+<td> <title="Destroy the fire elemental created from chaotic energy fusing with the C.L.E.A.N. 5000&#39;s energy core">Fire Elemental</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554253200">01:00</span> </td>
+<td> <title="Slay the Shatterer">The Shatterer</td>
+<td> <title="Triple Trouble">Evolved Jungle Wurm
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554254100">01:15</span> </td>
+<td> <title="Defeat the great jungle wurm">Great Jungle Wurm</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554255000">01:30</span> </td>
+<td> <title="Defeat Ulgoth the Modniir and his minions">Modniir Ulgoth</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554255900">01:45</span> </td>
+<td> <title="Defeat the shadow behemoth">Shadow Behemoth</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554256800">02:00</span> </td>
+<td> <title="Defeat the Inquest&#39;s golem Mark II">Golem Mark II</td>
+<td> <title="Defeat the Karka Queen threatening the settlements">Karka Queen
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554257700">02:15</span> </td>
+<td> <title="Kill the Svanir shaman chief to break his control over the ice elemental">Svanir Shaman Chief</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554258600">02:30</span> </td>
+<td> <title="Defeat the Claw of Jormag">Claw of Jormag</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554259500">02:45</span> </td>
+<td> <title="Destroy the fire elemental created from chaotic energy fusing with the C.L.E.A.N. 5000&#39;s energy core">Fire Elemental</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554260400">03:00</span> </td>
+<td> <title="Kill Admiral Taidha Covington">Admiral Taidha Covington</td>
+<td> <title="Defeat Tequatl the Sunless">Tequatl the Sunless
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554261300">03:15</span> </td>
+<td> <title="Defeat the great jungle wurm">Great Jungle Wurm</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554262200">03:30</span> </td>
+<td> <title="Kill the megadestroyer before it blows everyone up">Megadestroyer</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554263100">03:45</span> </td>
+<td> <title="Defeat the shadow behemoth">Shadow Behemoth</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554264000">04:00</span> </td>
+<td> <title="Slay the Shatterer">The Shatterer</td>
+<td> <title="Triple Trouble">Evolved Jungle Wurm
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554264900">04:15</span> </td>
+<td> <title="Kill the Svanir shaman chief to break his control over the ice elemental">Svanir Shaman Chief</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554265800">04:30</span> </td>
+<td> <title="Defeat Ulgoth the Modniir and his minions">Modniir Ulgoth</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554266700">04:45</span> </td>
+<td> <title="Destroy the fire elemental created from chaotic energy fusing with the C.L.E.A.N. 5000&#39;s energy core">Fire Elemental</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554267600">05:00</span> </td>
+<td> <title="Defeat the Inquest&#39;s golem Mark II">Golem Mark II</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554268500">05:15</span> </td>
+<td> <title="Defeat the great jungle wurm">Great Jungle Wurm</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554269400">05:30</span> </td>
+<td> <title="Defeat the Claw of Jormag">Claw of Jormag</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554270300">05:45</span> </td>
+<td> <title="Defeat the shadow behemoth">Shadow Behemoth</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554271200">06:00</span> </td>
+<td> <title="Kill Admiral Taidha Covington">Admiral Taidha Covington</td>
+<td> <title="Defeat the Karka Queen threatening the settlements">Karka Queen
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554272100">06:15</span> </td>
+<td> <title="Kill the Svanir shaman chief to break his control over the ice elemental">Svanir Shaman Chief</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554273000">06:30</span> </td>
+<td> <title="Kill the megadestroyer before it blows everyone up">Megadestroyer</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554273900">06:45</span> </td>
+<td> <title="Destroy the fire elemental created from chaotic energy fusing with the C.L.E.A.N. 5000&#39;s energy core">Fire Elemental</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554274800">07:00</span> </td>
+<td> <title="Slay the Shatterer">The Shatterer</td>
+<td> <title="Defeat Tequatl the Sunless">Tequatl the Sunless
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554275700">07:15</span> </td>
+<td> <title="Defeat the great jungle wurm">Great Jungle Wurm</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554276600">07:30</span> </td>
+<td> <title="Defeat Ulgoth the Modniir and his minions">Modniir Ulgoth</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554277500">07:45</span> </td>
+<td> <title="Defeat the shadow behemoth">Shadow Behemoth</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554278400">08:00</span> </td>
+<td> <title="Defeat the Inquest&#39;s golem Mark II">Golem Mark II</td>
+<td> <title="Triple Trouble">Evolved Jungle Wurm
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554279300">08:15</span> </td>
+<td> <title="Kill the Svanir shaman chief to break his control over the ice elemental">Svanir Shaman Chief</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554280200">08:30</span> </td>
+<td> <title="Defeat the Claw of Jormag">Claw of Jormag</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554281100">08:45</span> </td>
+<td> <title="Destroy the fire elemental created from chaotic energy fusing with the C.L.E.A.N. 5000&#39;s energy core">Fire Elemental</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554282000">09:00</span> </td>
+<td> <title="Kill Admiral Taidha Covington">Admiral Taidha Covington</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554282900">09:15</span> </td>
+<td> <title="Defeat the great jungle wurm">Great Jungle Wurm</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554283800">09:30</span> </td>
+<td> <title="Kill the megadestroyer before it blows everyone up">Megadestroyer</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554284700">09:45</span> </td>
+<td> <title="Defeat the shadow behemoth">Shadow Behemoth</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554285600">10:00</span> </td>
+<td> <title="Slay the Shatterer">The Shatterer</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554286500">10:15</span> </td>
+<td> <title="Kill the Svanir shaman chief to break his control over the ice elemental">Svanir Shaman Chief</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554287400">10:30</span> </td>
+<td> <title="Defeat Ulgoth the Modniir and his minions">Modniir Ulgoth</td>
+<td> <title="Defeat the Karka Queen threatening the settlements">Karka Queen
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554288300">10:45</span> </td>
+<td> <title="Destroy the fire elemental created from chaotic energy fusing with the C.L.E.A.N. 5000&#39;s energy core">Fire Elemental</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554289200">11:00</span> </td>
+<td> <title="Defeat the Inquest&#39;s golem Mark II">Golem Mark II</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554290100">11:15</span> </td>
+<td> <title="Defeat the great jungle wurm">Great Jungle Wurm</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554291000">11:30</span> </td>
+<td> <title="Defeat the Claw of Jormag">Claw of Jormag</td>
+<td> <title="Defeat Tequatl the Sunless">Tequatl the Sunless
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554291900">11:45</span> </td>
+<td> <title="Defeat the shadow behemoth">Shadow Behemoth</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554292800">12:00</span> </td>
+<td> <title="Kill Admiral Taidha Covington">Admiral Taidha Covington/td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554293700">12:15</span> </td>
+<td> <title="Kill the Svanir shaman chief to break his control over the ice elemental">Svanir Shaman Chief</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554294600">12:30</span> </td>
+<td> <title="Kill the megadestroyer before it blows everyone up">Megadestroyer</td>
+<td> <title="Triple Trouble">Evolved Jungle Wurm
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554295500">12:45</span> </td>
+<td> <title="Destroy the fire elemental created from chaotic energy fusing with the C.L.E.A.N. 5000&#39;s energy core">Fire Elemental</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554296400">13:00</span> </td>
+<td> <title="Slay the Shatterer">The Shatterer</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554297300">13:15</span> </td>
+<td> <title="Defeat the great jungle wurm">Great Jungle Wurm</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554298200">13:30</span> </td>
+<td> <title="Defeat Ulgoth the Modniir and his minions">Modniir Ulgoth</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554299100">13:45</span> </td>
+<td> <title="Defeat the shadow behemoth">Shadow Behemoth</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554300000">14:00</span> </td>
+<td> <title="Defeat the Inquest&#39;s golem Mark II">Golem Mark II</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554300900">14:15</span> </td>
+<td> <title="Kill the Svanir shaman chief to break his control over the ice elemental">Svanir Shaman Chief</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554301800">14:30</span> </td>
+<td> <title="Defeat the Claw of Jormag">Claw of Jormag</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554302700">14:45</span> </td>
+<td> <title="Destroy the fire elemental created from chaotic energy fusing with the C.L.E.A.N. 5000&#39;s energy core">Fire Elemental</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554303600">15:00</span> </td>
+<td> <title="Kill Admiral Taidha Covington">Admiral Taidha Covington</td>
+<td> <title="Defeat the Karka Queen threatening the settlements">Karka Queen
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554304500">15:15</span> </td>
+<td> <title="Defeat the great jungle wurm">Great Jungle Wurm</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554305400">15:30</span> </td>
+<td> <title="Kill the megadestroyer before it blows everyone up">Megadestroyer</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554306300">15:45</span> </td>
+<td> <title="Defeat the shadow behemoth">Shadow Behemoth</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554307200">16:00</span> </td>
+<td> <title="Slay the Shatterer">The Shatterer</td>
+<td> <title="Defeat Tequatl the Sunless">Tequatl the Sunless
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554308100">16:15</span> </td>
+<td> <title="Kill the Svanir shaman chief to break his control over the ice elemental">Svanir Shaman Chief</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554309000">16:30</span> </td>
+<td> <title="Defeat Ulgoth the Modniir and his minions">Modniir Ulgoth</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554309900">16:45</span> </td>
+<td> <title="Destroy the fire elemental created from chaotic energy fusing with the C.L.E.A.N. 5000&#39;s energy core">Fire Elemental</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554310800">17:00</span> </td>
+<td> title="Defeat the Inquest&#39;s golem Mark II">Golem Mark II</td>
+<td> <title="Triple Trouble">Evolved Jungle Wurm
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554311700">17:15</span> </td>
+<td> <title="Defeat the great jungle wurm">Great Jungle Wurm</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554312600">17:30</span> </td>
+<td> <title="Defeat the Claw of Jormag">Claw of Jormag</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554313500">17:45</span> </td>
+<td> <title="Defeat the shadow behemoth">Shadow Behemoth</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554314400">18:00</span> </td>
+<td> <title="Kill Admiral Taidha Covington">Admiral Taidha Covington</td>
+<td> <title="Defeat the Karka Queen threatening the settlements">Karka Queen
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554315300">18:15</span> </td>
+<td> <title="Kill the Svanir shaman chief to break his control over the ice elemental">Svanir Shaman Chief</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554316200">18:30</span> </td>
+<td> <title="Kill the megadestroyer before it blows everyone up">Megadestroyer</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554317100">18:45</span> </td>
+<td> <title="Destroy the fire elemental created from chaotic energy fusing with the C.L.E.A.N. 5000&#39;s energy core">Fire Elemental</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554318000">19:00</span> </td>
+<td> <title="Slay the Shatterer">The Shatterer</td>
+<td> <title="Defeat Tequatl the Sunless">Tequatl the Sunless
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554318900">19:15</span> </td>
+<td> <title="Defeat the great jungle wurm">Great Jungle Wurm</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554319800">19:30</span> </td>
+<td> <title="Defeat Ulgoth the Modniir and his minions">Modniir Ulgoth</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554320700">19:45</span> </td>
+<td> <title="Defeat the shadow behemoth">Shadow Behemoth</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554321600">20:00</span> </td>
+<td> <title="Defeat the Inquest&#39;s golem Mark II">Golem Mark II</td>
+<td> <title="Triple Trouble">Evolved Jungle Wurm
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554322500">20:15</span> </td>
+<td> <title="Kill the Svanir shaman chief to break his control over the ice elemental">Svanir Shaman Chief</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554323400">20:30</span> </td>
+<td> <title="Defeat the Claw of Jormag">Claw of Jormag</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554324300">20:45</span> </td>
+<td> <title="Destroy the fire elemental created from chaotic energy fusing with the C.L.E.A.N. 5000&#39;s energy core">Fire Elemental</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554325200">21:00</span> </td>
+<td> <title="Kill Admiral Taidha Covington">Admiral Taidha Covington</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554326100">21:15</span> </td>
+<td> <title="Defeat the great jungle wurm">Great Jungle Wurm</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554327000">21:30</span> </td>
+<td> <title="Kill the megadestroyer before it blows everyone up">Megadestroyer</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554327900">21:45</span> </td>
+<td> <title="Defeat the shadow behemoth">Shadow Behemoth</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554328800">22:00</span> </td>
+<td> <title="Slay the Shatterer">The Shatterer</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554329700">22:15</span> </td>
+<td> <title="Kill the Svanir shaman chief to break his control over the ice elemental">Svanir Shaman Chief</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554330600">22:30</span> </td>
+<td> <title="Defeat Ulgoth the Modniir and his minions">Modniir Ulgoth</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554331500">22:45</span> </td>
+<td> <title="Destroy the fire elemental created from chaotic energy fusing with the C.L.E.A.N. 5000&#39;s energy core">Fire Elemental</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554332400">23:00</span> </td>
+<td> <title="Defeat the Inquest&#39;s golem Mark II">Golem Mark II</td>
+<td> <title="Defeat the Karka Queen threatening the settlements">Karka Queen
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554333300">23:15</span> </td>
+<td> <title="Defeat the great jungle wurm">Great Jungle Wurm</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554334200">23:30</span> </td>
+<td> <title="Defeat the Claw of Jormag">Claw of Jormag</td>
+<td>
+</td></tr>
+<tr>
+<td> <span class="utc-auto-convert" data-time="1554335100">23:45</span> </td>
+<td> <title="Defeat the shadow behemoth">Shadow Behemoth</td>
+<td>
+</td></tr></table>
